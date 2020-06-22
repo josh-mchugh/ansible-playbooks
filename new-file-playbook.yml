@@ -6,5 +6,5 @@
   
   - name: Hello World
     copy:
-	  dest: ~/hello-world.txt
-	  content: Hello World!
+	    dest: ~/hello-world.txt
+	    content: Hello World!
