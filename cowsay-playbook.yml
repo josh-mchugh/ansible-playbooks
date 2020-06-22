@@ -1,0 +1,14 @@
+---
+
+- name: Cow Say playbook
+  hosts: all
+  tasks:
+
+  - name: Install cowsay
+    apt:
+      name: cowsay
+      state: present
+  
+  - name: Say MOO
+    debug:
+      msg: MOO!!
