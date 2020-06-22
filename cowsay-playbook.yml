@@ -11,5 +11,9 @@
     become: yes
   
   - name: Say MOO
-    debug:
-      msg: MOO!!
+    command:
+      cmd: cowsay "MOO!!"
+    register: out
+
+  - debug:
+      msg: "{{out.stdout_lines}}"
