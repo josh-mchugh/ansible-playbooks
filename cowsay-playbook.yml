@@ -39,5 +39,6 @@
         cmd: cowsay "MOO!!"
       register: out
 
-    - debug:
-      msg: "{{out.stdout_lines}}"
+    - name: Print out command lines
+      debug:
+        msg: "{{out.stdout_lines}}"
