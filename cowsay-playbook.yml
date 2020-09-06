@@ -37,7 +37,7 @@
 
     - name: Say MOO
       command:
-        cmd: cowsay "MOO!!"
+        cmd: cowsay hello
       register: out
 
     - name: Print out command lines
