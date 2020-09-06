@@ -3,6 +3,7 @@
 - name: Cow Say playbook
   hosts: "{{host_names}}"
   remote_user: ubuntu
+  become: yes
   tasks:
     - name: Update apt repo and cache on all Debian/Ubuntu boxes
       apt:
@@ -35,7 +36,7 @@
         state: present
 
     - name: Say MOO
-      command:
+      shell:
         cmd: cowsay hello
       register: out
 
