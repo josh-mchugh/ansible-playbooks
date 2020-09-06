@@ -34,7 +34,6 @@
       apt:
         name: cowsay
         state: present
-        become: yes
 
     - name: Say MOO
       command:
