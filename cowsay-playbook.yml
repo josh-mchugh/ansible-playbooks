@@ -33,6 +33,14 @@
       when: reboot_required_file.stat.exists
       become: yes
 
+    - name: Install Glances
+      pip:
+        name: glances
+
+    - name: Run glances server
+      command:
+        cmd: glances -s
+
     - name: Install cowsay
       apt:
         name: cowsay
